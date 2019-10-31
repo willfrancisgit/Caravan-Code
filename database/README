@@ -1,9 +1,9 @@
+Install Heroku CLI and create an account
+https://devcenter.heroku.com/categories/command-line
 
 
-Type this into terminal to connect to server:
-
+after installing, type this into terminal to connect to server:
 psql -h ec2-54-83-201-84.compute-1.amazonaws.com -p 5432 -U hqgxkojofdagea -W d2a5sb6n9aknkq
 
 password:
 0af0023a8d186e31990e1a1eee7c8ba7ca84f35194ff2785e46aaf9d340920db
-
