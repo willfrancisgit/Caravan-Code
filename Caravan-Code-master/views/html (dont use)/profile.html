@@ -1,0 +1,263 @@
+<!--Profile page-->
+
+<!DOCTYPE html>
+<!--Start of Bootstrap CDN-->
+				<!-- Latest compiled and minified CSS -->
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+				<!-- jQuery library -->
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+				<!-- Popper JS -->
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+				<!-- Latest compiled JavaScript -->
+				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+					
+				</script>
+<!--End of Bootstrap CDN-->
+    
+    <html>
+      
+      <head>
+      <style>		
+                  
+
+       h1{	color:black;
+       		text-align:center;}
+       	
+       	p{text-align: center}
+       
+      </style>
+      </head>
+
+<body>
+        <h1>My Profile</h1>
+        <img src="../resources/img/Profile_Background.JPG" class="img-fluid">
+       	<p>Tell us about yourself so that you can get connected with other climbers.</p>  	
+
+<!--Start of Name-->
+<form method="POST" action="/submit-form">
+  			<div class="row">
+	    		<div class="col">
+	     			 <input type="text" name="fname" class="form-control" placeholder="First name">
+	    		</div>
+	   			<div class="col">
+	      			<input type="text" name="lname" class="form-control" placeholder="Last name">
+	    		</div>
+  			</div>
+<!--End of Name-->
+  			<br>
+
+<!--Start of About Me-->
+      	<div class="form-group">
+    	       <p>About Me</p>
+    			<textarea class="form-control" name="about_me" id="About_Me" placeholder="Tell us a little about yourself."></textarea>
+  			</div>
+<!--End of About Me-->
+
+
+<!--Start of Avaliability--> 
+<div class="row">
+  <div class="col">
+    <p2>Your Availibilty</p2>
+       <div class="form-check">
+
+  <style>
+  div{
+    
+    margin-right: 75px;
+    margin-left: 75px;
+  }
+  </style>
+            <input class="form-check-input" type="checkbox" name="Su" id="Availibilty_1" value="option_1" >
+            <label class="form-check-label" for="Availibilty_1">
+              Sunday
+            </label>
+        </div>
+        
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="Mo" id="Availibilty_2" value="option_2" >
+            <label class="form-check-label" for="Availibilty_2">
+             Monday
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="Tu" id="Availibilty_3" value="option_3" >
+            <label class="form-check-label" for="Availibilty_3">
+              Tuesday
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="We" id="Availibilty_4" value="option_4" >
+            <label class="form-check-label" for="Availibilty_4">
+              Wednesday
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="Th" id="Availibilty_5" value="option_5" >
+            <label class="form-check-label" for="Availibilty_5">
+              Thursday
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="Fr" id="Availibilty_6" value="option_6" >
+            <label class="form-check-label" for="Availibilty_6">
+              Friday
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="Sa" id="Availibilty_7" value="option_7" >
+            <label class="form-check-label" for="Availibilty_7">
+              Saturday
+            </label>
+        </div>
+  </div>
+<!--End of Availibilty-->
+
+<!--Start of Types of Climbing-->
+<div class="col">
+  <p3>Type of Climbing You Do</p3>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="trad" value="option1">
+        <label class="form-check-label" for="inlineCheckbox1">Traditional Climbing</label>
+    </div>
+
+    <div class="form-check ">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="sport" value="option2">
+        <label class="form-check-label" for="inlineCheckbox2">Sport Climbing</label>
+    </div>
+    
+    <div class="form-check ">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="solo" value="option3">
+        <label class="form-check-label" for="inlineCheckbox3">Free Solo Climbing</label>
+    </div>
+
+    <div class="form-check ">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox4" name="ice" value="option4">
+        <label class="form-check-label" for="inlineCheckbox4">Ice Climbing</label>
+    </div>
+    
+    
+
+  </div>
+<!--End of Types of Climbing-->
+<br>
+<!--Start of Location-->
+<div class="row">
+<div class="col">
+</div>
+<div class="col">
+  <div class="col-md-3 mb-3">
+      <label for="validationCustom05">Enter a Zip Code to Find People Nearby</label>
+      <input type="text" name="zip" class="form-control" id="validationCustom05" placeholder="Zip" required>
+      <div class="invalid-feedback">
+        Please provide a valid zip.
+      </div>
+   </div>
+   
+  </div>
+
+<!--End of Location-->
+
+<!--Start of Experience Level-->
+<div class="row">
+  <div class="col">
+    <p2>Your Experience Level</p2>
+       <div class="form-check">
+
+  <style>
+  div{
+    
+    margin-right: 75px;
+    margin-left: 75px;
+  }
+  </style>
+            <input class="form-check-input" type="radio" name="beginner" id="Experience_Level_1" value="option_1" >
+            <label class="form-check-label" for="Experience_Level_1">
+              Beginner
+            </label>
+        </div>
+        
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="some" id="Experience_Level_2" value="option_2" >
+            <label class="form-check-label" for="Experience_Level_2">
+             Some Experience
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="intermediate" id="Experience_Level_3" value="option_3" >
+            <label class="form-check-label" for="Experience_Level_3">
+              Intermediate
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="lots" id="Experience_Level_4" value="option_4" >
+            <label class="form-check-label" for="Experience_Level_4">
+              A lot of Experience
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="pro" id="Experience_Level_5" value="option_5" >
+            <label class="form-check-label" for="Experience_Level_5">
+              Pro
+            </label>
+        </div>
+  </div>
+<!--End of Experience Level-->
+
+<!--Start of Equipment-->
+<div class="col">
+  <p3>Equipment You Have</p3>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="rope" value="option1">
+        <label class="form-check-label" for="inlineCheckbox1">Climbing rope</label>
+    </div>
+
+    <div class="form-check ">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="chalk" value="option2">
+        <label class="form-check-label" for="inlineCheckbox2">Chalk Bag</label>
+    </div>
+    
+    <div class="form-check ">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="crabs" value="option3">
+        <label class="form-check-label" for="inlineCheckbox3">Carabiners/Quickdraws</label>
+    </div>
+
+    <div class="form-check ">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox4" name="belay" value="option4">
+        <label class="form-check-label" for="inlineCheckbox4">Belay Device</label>
+    </div>
+    
+    <div class="form-check ">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox5" name="ax" value="option5">
+        <label class="form-check-label" for="inlineCheckbox5">Ice Ax</label>
+    </div>
+
+    <div class="form-check ">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox6" name="gear" value="option6">
+        <label class="form-check-label" for="inlineCheckbox6">Ice Screw/Thing that goes into the crack of rocks</label>
+    </div>
+
+  </div>
+  <div class="form-row text-center">
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+ </div>
+</form>
+<!--End of Equipment-->
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+doctype html
+// Profile page
+// Start of Bootstrap CDN
+// Latest compiled and minified CSS
+link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+// jQuery library
+script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+// Popper JS
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js')
+// Latest compiled JavaScript
+script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js')
+// End of Bootstrap CDN
+head
+  style.
+    h1{	color:black;
+    text-align:center;}
+    p{text-align: center}
+h1 My Profile
+img.img-fluid(src='../resources/img/Profile_Background.JPG')
+p Tell us about yourself so that you can get connected with other climbers.
+
+
+// Start of Name
+//user_name and password are stored in the profile_info database table.
+form(method='POST' action='/submit-form')
+  p Account Info
+  .row
+    .col
+      //user_name is the email
+      input.form-control(type='text' name='user_name' placeholder='Email Address')
+    .col
+      //db-table = profile_info
+      input.form-control(type='text' name='password' placeholder='Create Password')
+      .row
+        input.form-control(type='text' name='conf_password' placeholder='Confirm Password')
+
+  br
+  // Start of About Me. This info will be put into profile_info tables in the postgresql database.
+  // user_name | password | first | last | about_me | zip 
+  .form-group
+    p About Me
+    .row
+      .col
+        input.form-control(type='text' name='first' placeholder='First Name')
+      .col
+        //db-table = profile_info
+        input.form-control(type='text' name='last' placeholder='Last Name')
+    // End of Name
+    textarea#About_Me.form-control(name='about_me' placeholder='Tell us a little about yourself.')
+  // End of About Me
+
+
+  // Start of Avaliability
+  // availability will be stored in the days_available table
+  .row
+    .col
+      p2 Your Availibilty
+      .form-check
+        style.
+          div{
+          margin-right: 75px;
+          margin-left: 75px;
+          }
+        input#Availibilty_1.form-check-input(type='checkbox' name='su' value='option_1')
+        label.form-check-label(for='Availibilty_1')
+          | Sunday
+      .form-check
+        input#Availibilty_2.form-check-input(type='checkbox' name='mo' value='option_2')
+        label.form-check-label(for='Availibilty_2')
+          | Monday
+      .form-check
+        input#Availibilty_3.form-check-input(type='checkbox' name='tu' value='option_3')
+        label.form-check-label(for='Availibilty_3')
+          | Tuesday
+      .form-check
+        input#Availibilty_4.form-check-input(type='checkbox' name='we' value='option_4')
+        label.form-check-label(for='Availibilty_4')
+          | Wednesday
+      .form-check
+        input#Availibilty_5.form-check-input(type='checkbox' name='th' value='option_5')
+        label.form-check-label(for='Availibilty_5')
+          | Thursday
+      .form-check
+        input#Availibilty_6.form-check-input(type='checkbox' name='fr' value='option_6')
+        label.form-check-label(for='Availibilty_6')
+          | Friday
+      .form-check
+        input#Availibilty_7.form-check-input(type='checkbox' name='sa' value='option_7')
+        label.form-check-label(for='Availibilty_7')
+          | Saturday
+    // End of Availibilty
+
+
+    // Start of Types of Climbing
+    // these variables are being stored in the type_climber table
+    .col
+      p3 Type of Climbing You Do
+      .form-check
+        input#inlineCheckbox1.form-check-input(type='checkbox' name='trad' value='option1')
+        label.form-check-label(for='inlineCheckbox1') Traditional Climbing
+      .form-check
+        input#inlineCheckbox2.form-check-input(type='checkbox' name='sport' value='option2')
+        label.form-check-label(for='inlineCheckbox2') Sport Climbing
+      .form-check
+        input#inlineCheckbox3.form-check-input(type='checkbox' name='fs' value='option3')
+        label.form-check-label(for='inlineCheckbox3') Free Solo Climbing
+      .form-check
+        input#inlineCheckbox4.form-check-input(type='checkbox' name='ice' value='option4')
+        label.form-check-label(for='inlineCheckbox4') Ice Climbing
+    // End of Types of Climbing
+
+    //- // Start of Location
+    //- .row
+    //-   .col
+    //-   .col
+    //-     .col-md-3.mb-3
+    //-       //db-table = profile_info
+    //-       label(for='validationCustom05') Enter a Zip Code to Find People Nearby
+    //-       input#validationCustom05.form-control(type='text' name='zip' placeholder='Zip' required='')
+    //-       .invalid-feedback
+    //-         | Please provide a valid zip.
+    //-   // End of Location
+
+    br
+    
+    // Start of Experience Level
+    // these values will be inserted into the skill_level table.
+    .row
+      .col
+        p2 Your Experience Level
+        .form-check
+          style.
+            div{
+            margin-right: 75px;
+            margin-left: 75px;
+            }
+          input#Experience_Level_1.form-check-input(type='radio' name='beginner' value='option_1')
+          label.form-check-label(for='Experience_Level_1')
+            | Beginner
+        .form-check
+          input#Experience_Level_2.form-check-input(type='radio' name='some_exp' value='option_2')
+          label.form-check-label(for='Experience_Level_2')
+            | Some Experience
+        .form-check
+          input#Experience_Level_3.form-check-input(type='radio' name='intermediate' value='option_3')
+          label.form-check-label(for='Experience_Level_3')
+            | Intermediate
+        .form-check
+          input#Experience_Level_4.form-check-input(type='radio' name='experienced' value='option_4')
+          label.form-check-label(for='Experience_Level_4')
+            | A lot of Experience
+        .form-check
+          input#Experience_Level_5.form-check-input(type='radio' name='pro' value='option_5')
+          label.form-check-label(for='Experience_Level_5')
+            | Pro
+      // End of Experience Level
+
+
+      // Start of Equipment
+      // these values will be stored in the equipment table
+      .col
+        p3 Equipment You Have
+        .form-check
+          input#inlineCheckbox1.form-check-input(type='checkbox' name='rope' value='option1')
+          label.form-check-label(for='inlineCheckbox1') Climbing rope
+        .form-check
+          input#inlineCheckbox2.form-check-input(type='checkbox' name='chalk_bag' value='option2')
+          label.form-check-label(for='inlineCheckbox2') Chalk Bag
+        .form-check
+          input#inlineCheckbox3.form-check-input(type='checkbox' name='carabiners' value='option3')
+          label.form-check-label(for='inlineCheckbox3') Carabiners/Quickdraws
+        .form-check
+          input#inlineCheckbox4.form-check-input(type='checkbox' name='belay' value='option4')
+          label.form-check-label(for='inlineCheckbox4') Belay Device
+        .form-check
+          input#inlineCheckbox5.form-check-input(type='checkbox' name='ice_ax' value='option5')
+          label.form-check-label(for='inlineCheckbox5') Ice Ax
+        .form-check
+          input#inlineCheckbox6.form-check-input(type='checkbox' name='ice_screw' value='option6')
+          label.form-check-label(for='inlineCheckbox6') Ice Screw/Thing that goes into the crack of rocks
+      .form-row.text-center
+        .col-12
+          button.btn.btn-primary(type='submit') Submit
+// End of Equipment
