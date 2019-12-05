@@ -21,7 +21,7 @@ const pug = require('pug'); // Add the 'pug' view engine
 const compiledFunction = pug.compileFile('./views/pages/login.pug');
 
 //Create Database Connection
-const pgp = require('')();
+const pgp = require('Pg-Promise')();
 
 
 /**********************

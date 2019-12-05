@@ -3,6 +3,7 @@
     "main": "server.js",
     "dependencies": {
         "express": "^4.6.1",
+        "grpc": "^1.24.2",
         "pg-promise": "^9.3.3",
         "pug": "^2.0.4"
     }
