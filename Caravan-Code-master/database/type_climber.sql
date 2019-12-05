@@ -4,5 +4,6 @@ CREATE TABLE IF NOT EXISTS type_climber (
 	Trad BOOLEAN,
 	Sport BOOLEAN,
 	FS BOOLEAN,
-	Ice BOOLEAN
+	Ice BOOLEAN,
+	PRIMARY KEY (user_name)
 );

@@ -8,5 +8,6 @@ CREATE TABLE IF NOT EXISTS days_available (
 	We BOOLEAN,
 	Th BOOLEAN,
 	Fr BOOLEAN,
-	Sa BOOLEAN
+	Sa BOOLEAN,
+	PRIMARY KEY (user_name)
 );

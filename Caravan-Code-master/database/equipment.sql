@@ -6,5 +6,6 @@ CREATE TABLE IF NOT EXISTS equipment (
 	Carabiners BOOLEAN,
 	Belay BOOLEAN,
 	Ice_ax BOOLEAN,
-	Ice_screw BOOLEAN
+	Ice_screw BOOLEAN,
+	PRIMARY KEY (user_name)
 );

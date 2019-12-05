@@ -5,5 +5,6 @@ CREATE TABLE IF NOT EXISTS skill_level (
 	Some_exp BOOLEAN,
 	Intermediate BOOLEAN,
 	Experienced BOOLEAN,		
-	Pro BOOLEAN
+	Pro BOOLEAN,
+	PRIMARY KEY (user_name)
 );

@@ -7,3 +7,7 @@ psql -h ec2-54-83-201-84.compute-1.amazonaws.com -p 5432 -U hqgxkojofdagea -W d2
 
 password:
 0af0023a8d186e31990e1a1eee7c8ba7ca84f35194ff2785e46aaf9d340920db
+
+
+after initial connection to database in heroku, use the following command in your terminal to connect to the database and edit:
+heroku pg:psql postgresql-spherical-13391 --app caravan-cu
