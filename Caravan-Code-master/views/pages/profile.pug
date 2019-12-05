@@ -22,7 +22,7 @@ p Tell us about yourself so that you can get connected with other climbers.
 
 // Start of Name
 //user_name and password are stored in the profile_info database table.
-form(method='POST' action='/submit-form')
+form(method='GET' action='/submit_form')
   p Account Info
   .row
     .col
@@ -36,7 +36,7 @@ form(method='POST' action='/submit-form')
 
   br
   // Start of About Me. This info will be put into profile_info tables in the postgresql database.
-  // user_name | password | first | last | about_me | zip 
+  // user_name | password | first | last | about_me
   .form-group
     p About Me
     .row

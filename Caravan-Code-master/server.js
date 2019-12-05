@@ -21,7 +21,7 @@ const pug = require('pug'); // Add the 'pug' view engine
 const compiledFunction = pug.compileFile('./views/pages/login.pug');
 
 //Create Database Connection
-const pgp = require('Pg-Promise')();
+const pgp = require('pg-promise')();
 
 
 /**********************
@@ -62,36 +62,37 @@ app.get('/login', function(req, res) {
 
 // registration page
 app.get('/register', function(req, res) {
+  // console.log("test")
   res.render('../views/pages/profile',{
     my_title:"Registration Page"
   });
 });
 
 // pulls data from the table
-// app.post('/submit-form'), function(req,res) {
-//   var query_email = 'SELECT user_name FROM profile_info;';
+app.get('/submit_form', function(req,res) {
+  var query_email = 'SELECT user_name FROM profile_info;';
   
-//   //puts the results of the query into a batch.
-//   db.task('get-values', task =>{
-//     return task.batch([
-//       task.any(query_email)
-//     ]);
-//   })
-//   // stores the restults of the batch into an array we can use as index.
-//   .then(data => {
-//     console.log(data[0])
-//     res.render('pages/test',{
-//       my_title:"Testing"
-//     })
-//   })
-//   .catch(error => {
-//       // display error message in case an error
-//           console.log('error', err);
-//           res.render('register/page_name',{
-//         my_title: "ERROR",
-//       })
-//   });
-// };
+  //puts the results of the query into a batch.
+  db.task(query_email, task =>{
+    return task.batch([
+      task.any(query_email)
+    ]);
+  })
+  // stores the restults of the batch into an array we can use as index.
+  .then(data => {
+    console.log(data[0])
+    // res.render('pages/test',{
+    //   my_title:"Testing"
+    // })
+  })
+  .catch(error => {
+      // display error message in case an error
+          console.log('error', error);
+          res.render('../views/pages/profile',{
+        my_title: "ERROR",
+      })
+  });
+});
 
 
 
