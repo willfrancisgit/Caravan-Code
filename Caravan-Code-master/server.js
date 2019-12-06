@@ -37,14 +37,26 @@ const pgp = require('pg-promise')();
 **********************/
 
 
-//taken from Heroku server information
-const dbConfig = {
-	host: 'ec2-54-83-201-84.compute-1.amazonaws.com',
-	port: 5432,
-	database: 'd2a5sb6n9aknkq',
-	user: 'hqgxkojofdagea',
-	password: '0af0023a8d186e31990e1a1eee7c8ba7ca84f35194ff2785e46aaf9d340920db'
+// taken from Heroku server information
+// const dbConfig = {
+// 	host: 'ec2-54-83-201-84.compute-1.amazonaws.com',
+// 	port: 5432,
+// 	database: 'd2a5sb6n9aknkq',
+// 	user: 'hqgxkojofdagea',
+// 	password: '0af0023a8d186e31990e1a1eee7c8ba7ca84f35194ff2785e46aaf9d340920db'
+// };
+
+// const dbConfig = {
+  host: 'localhost',
+  port: 5432,
+  database: 'caravan',
+  user: 'sean',
+  password: ''
 };
+
+
+
+
 
 let db = pgp(dbConfig);
 
